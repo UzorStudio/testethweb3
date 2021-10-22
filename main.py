@@ -19,12 +19,12 @@ def how():
     print(block)
     return jsonify(block)
 
-@app.route("/how10coubt")
+@app.route("/how10count")
 def how10coubt():
     blocks = w.getLast10BlockInfo()
     count = 0
     for i in blocks:
-        count += len(json.loads(i)["transactions"])
+        count += len(i["transactions"])
 
     return {"count":count}
 
