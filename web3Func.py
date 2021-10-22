@@ -13,7 +13,7 @@ class Work():
 
         i = 0
         while i != 10:
-            bloks.append(Web3.toJSON(self.w3.eth.getBlock(self.w3.eth.blockNumber - i)))
+            bloks.append(json.loads(Web3.toJSON(self.w3.eth.getBlock(self.w3.eth.blockNumber - i))))
             i+=1
 
         return bloks
